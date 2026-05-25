@@ -485,10 +485,10 @@ spec:
           resources:
             requests:
               cpu: 100m
-              memory: 102Mi
+              memory: 100Mi
             limits:
-              cpu: 1000m
-              memory: 1024Mi
+              cpu: 1
+              memory: 1G
           command: []
           args: []
           ports:
@@ -656,11 +656,11 @@ spec:
       replicas: 1
       resources:
         limits:
-          cpu: 1000m
-          memory: 1024Mi
+          cpu: 1
+          memory: 1G
         requests:
           cpu: 100m
-          memory: 102Mi
+          memory: 100Mi
       serviceAccountName: ${{ defaults.app_name }}-mongo
       serviceVersion: 8.0.4
       volumeClaimTemplates:
@@ -755,11 +755,11 @@ spec:
       replicas: 1
       resources:
         limits:
-          cpu: 1000m
-          memory: 1024Mi
+          cpu: 1
+          memory: 1G
         requests:
           cpu: 100m
-          memory: 102Mi
+          memory: 100Mi
       serviceAccountName: ${{ defaults.app_name }}-pg
       switchPolicy:
         type: Noop
@@ -852,11 +852,11 @@ spec:
       replicas: 1
       resources:
         limits:
-          cpu: 1000m
-          memory: 1024Mi
+          cpu: 1
+          memory: 1G
         requests:
           cpu: 100m
-          memory: 102Mi
+          memory: 100Mi
       serviceAccountName: ${{ defaults.app_name }}-mysql
       switchPolicy:
         type: Noop
@@ -954,11 +954,11 @@ spec:
         - name: CUSTOM_SENTINEL_MASTER_NAME
       resources:
         limits:
-          cpu: 1000m
-          memory: 1024Mi
+          cpu: 1
+          memory: 1G
         requests:
           cpu: 100m
-          memory: 102Mi
+          memory: 100Mi
       serviceAccountName: ${{ defaults.app_name }}-redis
       serviceVersion: 7.2.7
       switchPolicy:
@@ -1107,11 +1107,11 @@ spec:
       replicas: 1
       resources:
         limits:
-          cpu: 1000m
-          memory: 1024Mi
+          cpu: 1
+          memory: 1G
         requests:
           cpu: 100m
-          memory: 102Mi
+          memory: 100Mi
       volumeClaimTemplates:
         - name: metadata
           spec:
@@ -1161,11 +1161,11 @@ spec:
       replicas: 1
       resources:
         limits:
-          cpu: 1000m
-          memory: 1024Mi
+          cpu: 1
+          memory: 1G
         requests:
           cpu: 100m
-          memory: 102Mi
+          memory: 100Mi
       volumeClaimTemplates:
         - name: data
           spec:
@@ -1270,11 +1270,11 @@ spec:
       replicas: 1
       resources:
         limits:
-          cpu: 1000m
-          memory: 1024Mi
+          cpu: 1
+          memory: 1G
         requests:
           cpu: 100m
-          memory: 102Mi
+          memory: 100Mi
       serviceAccountName: ${{ defaults.app_name }}-clickhouse
       volumeClaimTemplates:
         - name: data
@@ -1337,11 +1337,11 @@ spec:
       replicas: 1
       resources:
         limits:
-          cpu: "1"
-          memory: 1Gi
+          cpu: 1
+          memory: 1G
         requests:
-          cpu: "1"
-          memory: 1Gi
+          cpu: 100m
+          memory: 100Mi
       rsmTransformPolicy: ToSts
       serviceAccountName: ${{ defaults.app_name }}-weaviate
       volumeClaimTemplates:
